@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Space_Grotesk, Manrope } from 'next/font/google';
 import './globals.css';
+import Header from './components/Header';
 
 const playfair = Playfair_Display({
   variable: '--font-playfair',
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${spaceGrotesk.variable} ${manrope.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
